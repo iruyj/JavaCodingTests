@@ -14,7 +14,16 @@ public class Solution08 {
         System.out.println(num);
         return answer==501 ? -1 : answer;
     }
-
+	//±ò²ûÇÑ Ç®ÀÌ Âü°í¿ë
+	 public int collatz(int num) {
+	    long n = (long)num;
+	    for(int i =0; i<500; i++){      
+	      if(n==1) return i;
+	      n = (n%2==0) ? n/2 : n*3+1;            
+	    }
+	    return -1;
+	  }
+	    
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Solution08 s8 = new Solution08();
