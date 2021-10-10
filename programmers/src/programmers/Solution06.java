@@ -13,12 +13,12 @@ return 하도록 solution 함수를 완성하세요.
 		for (int i = 1; i <= count; i++) {
 			answer+= (i*price);
 		}
-        return answer-money;
+        return answer>money ? answer-money: 0;
     }
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 }

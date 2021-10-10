@@ -36,7 +36,6 @@ public class Solution03 {
 		int[][] arr = {{60, 50}, {30, 70}, {60, 30}, {80, 40}};
 		System.out.println(s3.solution3(arr));
 		System.out.println(s3.others3(arr));
-		
 	}
 
 }
