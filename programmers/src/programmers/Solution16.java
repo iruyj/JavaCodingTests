@@ -43,6 +43,17 @@ public class Solution16 {
 	        return answer;
 	    } 
 	
+	 // 자식을 3개 갖는 ternary tree 레이블링 풀이방법
+	 public String solution2(int n) {
+	      String[] num = {"4","1","2"};
+	      String answer = "";
+
+	      while(n > 0){
+	          answer = num[n % 3] + answer;
+	          n = (n - 1) / 3;
+	      }
+	      return answer;
+	  }
 	public static void main(String[] args) {
 		Solution16 s16 = new Solution16();
 		System.out.println(s16.solution(15));
