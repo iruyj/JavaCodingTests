@@ -30,6 +30,19 @@ public class Solution16 {
         }
         return answer.toString();
     }
+	// while문 안쓰고 풀이
+	 public String change124(int n) {
+	        String answer = "";
+
+	        if (n > 0) {
+	            int rest = n % 3;
+	            answer = ((rest == 0) ? "4" : (rest == 1) ? "1" : "2") + answer;
+	            answer = change124((n-1) / 3) + answer;
+	        }
+
+	        return answer;
+	    } 
+	
 	public static void main(String[] args) {
 		Solution16 s16 = new Solution16();
 		System.out.println(s16.solution(15));
