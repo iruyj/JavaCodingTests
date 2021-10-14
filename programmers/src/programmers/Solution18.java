@@ -14,4 +14,13 @@ public class Solution18 {
         answer+= phone_number.substring(i);
         return answer;
     }
+	
+	// 정규식 전방탐색을 이용한 풀이
+	/*. -> 임의의 문자 한 개 
+	 *  (?=.) -> 뒷쪽에 임의의 문자 한 개를 제외하고 선택
+	 * {숫자} -> 숫자 만큼의 자릿수 
+	 * .(?=.{4}) ==> 뒤쪽에서 임의의 문자 4개를 제외한 임의의 문자 한 개 선택*/
+	public String others(String phone_number) {
+	    return phone_number.replaceAll(".(?=.{4})", "*");
+	}
 }
